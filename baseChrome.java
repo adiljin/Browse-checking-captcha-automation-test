@@ -25,7 +25,7 @@ public class baseChrome {
         cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
         cap.setCapability("chromedriverExecutable","/Users/'USERNAME'/node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac/chromedriver");
         //cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
-        AndroidDriver<AndroidElement> driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver(new URL("SERVER'S URL"), cap);
 
         return driver;
 
