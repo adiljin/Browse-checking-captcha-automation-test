@@ -11,17 +11,19 @@ public class baseChrome {
 
     public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
         //Appium Chrome Browser
-
-//        File f = new File("src");
-//        File fs = new File(f, "ApiDemos-debug_latest.apk");
+        //For apk's needs
+        //File f = new File("src");
+        //File fs = new File(f, "ApiDemos-debug_latest.apk");
 
         DesiredCapabilities cap = new DesiredCapabilities();
-//        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
+        //For a real device
+        //cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
+        //For an emulator
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Demo");
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
         cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
-        cap.setCapability("chromedriverExecutable","/Users/Adilsha/node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac/chromedriver");
+        cap.setCapability("chromedriverExecutable","/Users/'USERNAME'/node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac/chromedriver");
         //cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
         AndroidDriver<AndroidElement> driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);
 
